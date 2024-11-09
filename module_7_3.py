@@ -22,9 +22,8 @@ class WordsFinder():
         for name, words in self.get_all_words().items():
             for i in range(len(words)):
                 if word == words[i]:
-                    dict_1.update({name: i})
-
-            return dict_1
+                    dict_1.update({name: i+1})
+                    return dict_1
 
     def count(self, word):
         dict_1 = {}
