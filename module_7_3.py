@@ -18,10 +18,9 @@ class WordsFinder():
 
     def find(self, word):
         dict_1 = {}
-        word = word.lower()
         for name, words in self.get_all_words().items():
             for i in range(len(words)):
-                if word == words[i]:
+                if word.lower() == words[i]:
                     dict_1.update({name: i+1})
                     return dict_1
 
